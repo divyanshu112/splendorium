@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPLENDORIUM ENTERTAINMENT</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    rel="stylesheet"
+    href="assets/css/animate.css"
+  />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      .mobile-menu {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        .mobile-menu {
+          display: block;
+        }
+        .desktop-menu {
+          display: none;
+        }
+        .mobile-menu.active {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: black;
+          padding: 1rem;
+          border-bottom: 1px solid #27272a;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black px-6">
+        <div class="w-full flex  justify-between items-center max-w-7xl mx-auto py-6 border-b border-zinc-800">
+            <div class="flex items-center gap-2">
+                <img src="assets/images/logo.png" alt="SPLENDORIUM Logo" class="h-14" />
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuButton" class="mobile-menu md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
+            <nav class="desktop-menu hidden md:flex items-center gap-6 text-sm text-gray-300">
+                <ul class="flex flex-col md:flex-row gap-10 items-center justify-center text-gray-300 text-base">
+                    <li><a href="#home" class="hover:text-purple-700 transition">Home</a></li>
+                    <li><a href="#about-us" class="hover:text-purple-700 transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-purple-700 transition">Services</a></li>
+                </ul>
+            </nav>
+
+            <!-- Desktop Auth Buttons -->
+            <div class="desktop-menu md:flex gap-4 items-center">
+                <a href="#" title="" class="inline-flex px-8 py-3 border-2 border-purple-700 rounded-lg font-semibold bg-purple-700 text-white transition-colors hover:bg-transparent hover:text-purple-500" role="button">
+                          Connect
+                  </a>
+            </div>
+        </div>  
+
+        <!-- Mobile Menu -->
+        <nav id="mobileNav" class="mobile-menu hidden">
+            <ul class="flex flex-col md:flex-row gap-4 justify-center text-gray-300 text-base pt-4">
+                <li><a href="#home" class="hover:text-purple-700 transition">Home</a></li>
+                <li><a href="#about-us" class="hover:text-purple-700 transition">About Us</a></li>
+                <li><a href="#services" class="hover:text-purple-700 transition">Services</a></li>
+            </ul>
+            <div class="flex gap-4 pt-4 pb-4">
+                <a href="#" title="" class="inline-flex px-8 py-3 border-2 border-purple-700 rounded-lg font-semibold bg-purple-700 text-white transition-colors mt-10  wow fadeInUp" role="button">
+                          Connect
+                  </a>
+            </div>
+        </nav>   
+    </header>
+
+    <div class="bg-white">
+      <header class="bg-[#FCF8F1] bg-opacity-30">
+          <div class="px-4 mx-auto sm:px-6 lg:px-8">
+              <div class="flex items-center justify-between h-16 lg:h-20">
+                  <div class="flex-shrink-0">
+                      <a href="#" title="" class="flex">
+                          <img class="w-auto h-8" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
+                      </a>
+                  </div>
+  
+                  <button type="button" class="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100">
+                      <!-- Menu open: "hidden", Menu closed: "block" -->
+                      <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path>
+                      </svg>
+  
+                      <!-- Menu open: "block", Menu closed: "hidden" -->
+                      <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                      </svg>
+                  </button>
+  
+                  <div class="hidden lg:flex lg:items-center lg:justify-center lg:space-x-10">
+                      <a href="#" title="" class="text-base text-black transition-all duration-200 hover:text-opacity-80"> Features </a>
+  
+                      <a href="#" title="" class="text-base text-black transition-all duration-200 hover:text-opacity-80"> Solutions </a>
+  
+                      <a href="#" title="" class="text-base text-black transition-all duration-200 hover:text-opacity-80"> Resources </a>
+  
+                      <a href="#" title="" class="text-base text-black transition-all duration-200 hover:text-opacity-80"> Pricing </a>
+                  </div>
+  
+                  <a href="#" title="" class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 text-base transition-all duration-200 hover:bg-yellow-300 hover:text-black focus:text-black focus:bg-yellow-300 font-semibold text-white bg-black rounded-full" role="button"> Join Now </a>
+              </div>
+          </div>
+      </header>
+  
+      <section class="bg-zinc-950 pt-10 sm:pt-16 lg:pt-24 pb-4" id="home">
+          <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+                  <div>
+                      <p class="text-base font-semibold tracking-wider text-purple-700 uppercase wow fadeInUp mt-6 md:mt-0">SPLENDORIUM ENTERTAINMENT</p>
+                      <h1 class="mt-4 text-4xl font-bold text-text lg:mt-8 sm:text-6xl xl:text-6xl wow fadeInUp">YOUR PARTNER IN ARTS, MUSIC, AND ENTERTAINMENT</h1>
+                      <p class="mt-4 text-base text-gray-300 lg:mt-8 sm:text-xl wow fadeInUp">The music distribution platform that lets you do it all</p>
+  
+                      <a href="#" title="" class="inline-flex px-8 py-3 border-2 border-purple-700 rounded-lg font-semibold bg-purple-700 text-white transition-colors mt-10 hover:bg-transparent hover:text-purple-500  wow fadeInUp" role="button">
+                          Connect
+                      </a>
+                  </div>
+  
+                  <div>
+                      <!-- <img class="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/1/hero-img.png" alt="" /> -->
+                      <img class="w-full wow zoomIn" src="assets/images/hero-img.png" />
+                  </div>
+              </div>
+          </div>
+          
+          <div class="flex justify-center w-full border-t border-gray-800 pt-4 mt-8 relative">
+            <div class="move-moving-logos">
+              <div class="single-moving-logo"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509ce30b267f537d7dbc_jio.webp" loading="lazy" alt="" class="marqueeimage"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509c531437b23665284c_deezer.webp" loading="lazy" alt="" class="marqueeimage"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509c1da979ff4ba09e63_spotify.webp" loading="lazy" alt="" class="marqueeimage"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509c7661e5c27bada11d_instagram.webp" loading="lazy" alt="" class="marqueeimage"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509ceb7eaac4d19cd557_anghami.webp" loading="lazy" alt="" class="marqueeimage"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509cd3076ed98e01769c_apple.webp" loading="lazy" alt="" class="marqueeimage"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509cdba6c4f6a06ce615_youtube.webp" loading="lazy" alt="" class="marqueeimage"><img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66af509ce30b267f537d7e28_amazon.webp" loading="lazy" alt="" class="marqueeimage"></div>
+            </div>
+            <div class="gradient-moving-logo-left"></div>
+            <div class="gradient-moving-logo-right"></div>
+          </div>
+          
+      </section>
+  </div>  
+
+    <!-- Hero Section -->
+    <!-- <section class="flex flex-col justify-center items-center text-center px-6 min-h-screen" id="home">
+      <p class="text-purple-700 text-sm font-semibold mb-4 tracking-wide">SPLENDORIUM ENTERTAINMENT</p>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate__animated animate__bounce">YOUR PARTNER IN ARTS, MUSIC, AND ENTERTAINMENT</h1>
+      <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed animate__animated animate__fadeInUp">
+        We empower creators and businesses in the arts & entertainment industry with world-class music distribution, YouTube CMS, music and movie promotion, legal rights management, and more. Take your creative journey to the next level with SPLENDORIUM ENTERTAINMENT.
+      </p>
+    </section> -->
+
+    <!-- Why Master Your Tracks Section -->
+    <section class="bg-black py-20 px-6" id="about-us">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center  gap-12">
+        <!-- Left: Text -->
+        <div class="flex-1 max-w-xl">
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight  wow fadeInUp">WHY CHOOSE SPLENDORIUM?</h2>
+          <p class="text-gray-300 text-lg mb-10  wow fadeInUp">From music and movie promotion to legal rights management, SPLENDORIUM ENTERTAINMENT is your one-stop solution for all things arts & entertainment. We help you distribute, protect, and promote your creative work globally.</p>
+          <a href="mailto:info@example.com" class="inline-block px-8 py-3 border-2 border-purple-700 text-white bg-purple-700 rounded-lg font-semibold hover:bg-transparent hover:text-purple-500 transition-colors  wow fadeInUp">Connect</a>
+        </div>
+        <!-- Right: Graphics & Image -->
+        <div class="flex-1 flex flex-col items-center md:items-end gap-6 relative w-full">
+          <img src="assets/images/about-company.png" alt="Arts & Entertainment" class="h-auto wow zoomIn">
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Use Madverse Mastering Section -->
+    <section class="bg-black py-20 px-6" id="services">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start">
+        <!-- Left: Heading and Button -->
+        <div class="flex-1 flex flex-col items-start justify-center w-full md:max-w-lg mx-auto md:mx-0 md:sticky md:top-32">
+          <span class="text-purple-700 text-sm font-semibold tracking-widest mb-4  wow fadeInUp">OUR SERVICES</span>
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight  wow fadeInUp">WHAT WE OFFER</h2>
+          <a href="mailto:info@example.com" class="inline-block px-8 py-3 border-2 border-purple-700 text-white rounded-lg font-semibold bg-purple-700 hover:bg-transparent hover:text-purple-500 transition-colors mt-4  wow fadeInUp">Connect</a>
+        </div>
+        <!-- Right: Info Boxes -->
+        <div class="flex-1 flex flex-col gap-8 w-full">
+          <!-- Info Box 1 -->
+          <div class="bg-zinc-900 rounded-2xl p-8 flex items-start gap-6 shadow-lg border border-zinc-800">
+            <span class="text-indigo-400 text-3xl mt-1">
+              <svg width="32" height="32" fill="none" stroke="#818CF8" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Arts & Entertainment</h3>
+              <p class="text-gray-400">Comprehensive solutions for artists, musicians, and creators in the entertainment industry.</p>
+            </div>
+          </div>
+          <!-- Info Box 2 -->
+          <div class="bg-zinc-900 rounded-2xl p-8 flex items-start gap-6 shadow-lg border border-zinc-800">
+            <span class="text-indigo-400 text-3xl mt-1">
+              <svg width="32" height="32" fill="none" stroke="#818CF8" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 10h.01M15 10h.01M9.5 15c1.5 1 3.5 1 5 0"/></svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Music Distribution</h3>
+              <p class="text-gray-400">Distribute your music to all major platforms and reach a global audience with ease.</p>
+            </div>
+          </div>
+          <!-- Info Box 3 -->
+          <div class="bg-zinc-900 rounded-2xl p-8 flex items-start gap-6 shadow-lg border border-zinc-800">
+            <span class="text-indigo-400 text-3xl mt-1">
+              <svg width="32" height="32" fill="none" stroke="#818CF8" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z"/></svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">YouTube CMS Service</h3>
+              <p class="text-gray-400">Manage and monetize your content on YouTube with our advanced CMS solutions.</p>
+            </div>
+          </div>
+          <!-- Info Box 4 -->
+          <div class="bg-zinc-900 rounded-2xl p-8 flex items-start gap-6 shadow-lg border border-zinc-800">
+            <span class="text-indigo-400 text-3xl mt-1">
+              <svg width="32" height="32" fill="none" stroke="#818CF8" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Music Promotion</h3>
+              <p class="text-gray-400">Boost your music's reach with targeted promotion and marketing strategies.</p>
+            </div>
+          </div>
+          <!-- Info Box 5 -->
+          <div class="bg-zinc-900 rounded-2xl p-8 flex items-start gap-6 shadow-lg border border-zinc-800">
+            <span class="text-indigo-400 text-3xl mt-1">
+              <svg width="32" height="32" fill="none" stroke="#818CF8" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="7" rx="2"/><path d="M16 11V7a4 4 0 00-8 0v4"/></svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Legal Right Manager</h3>
+              <p class="text-gray-400">Protect your intellectual property and manage your legal rights with confidence.</p>
+            </div>
+          </div>
+          <!-- Info Box 6 -->
+          <div class="bg-zinc-900 rounded-2xl p-8 flex items-start gap-6 shadow-lg border border-zinc-800">
+            <span class="text-indigo-400 text-3xl mt-1">
+              <svg width="32" height="32" fill="none" stroke="#818CF8" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20v-6M8 20v-4M16 20v-2"/><circle cx="12" cy="12" r="10"/></svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Movie Promotion & Copyright</h3>
+              <p class="text-gray-400">Comprehensive movie promotion and copyright management for filmmakers and producers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <!-- <section class="bg-zinc-900 py-20 px-6" id="faqs">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4" id="faq-accordion">
+          <div class="border border-zinc-800 rounded-lg overflow-hidden">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none faq-toggle">
+              <span class="font-semibold text-lg">What is SPLENDORIUM ENTERTAINMENT?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-400 hidden">
+              SPLENDORIUM ENTERTAINMENT is a leading platform offering services in arts & entertainment, music and movie promotion, distribution, legal rights management, and more.
+            </div>
+          </div>
+          <div class="border border-zinc-800 rounded-lg overflow-hidden">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none faq-toggle">
+              <span class="font-semibold text-lg">How can I distribute my music or movie?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-400 hidden">
+              Simply sign up and use our distribution services to get your music or movie on all major platforms worldwide.
+            </div>
+          </div>
+          <div class="border border-zinc-800 rounded-lg overflow-hidden">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none faq-toggle">
+              <span class="font-semibold text-lg">What is YouTube CMS Service?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-400 hidden">
+              Our YouTube CMS Service helps you manage, monetize, and protect your content on YouTube efficiently.
+            </div>
+          </div>
+          <div class="border border-zinc-800 rounded-lg overflow-hidden">
+            <button class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none faq-toggle">
+              <span class="font-semibold text-lg">How do you help with legal rights and copyright?</span>
+              <svg class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-400 hidden">
+              We offer legal rights management and copyright protection for your music and movies, ensuring your intellectual property is always secure.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    
+
+    <Section class="bg-black py-10 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:justify-between md:items-center text-center">
+        <p class="text-sm font-semibold tracking-wider text-purple-700 uppercase mb-4  wow fadeInUp">TESTIMONIALS</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-6 leading-tight  wow fadeInUp">TRUSTED BY 100K+ ARTISTS TO DISTRIBUTE,<br /> MONETISE & GROW</h2>
+      </div>
+      <div class="master-circles-wide  wow fadeInUp">
+        <div class="inner-circles-wide">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp" loading="lazy" sizes="(max-width: 681px) 100vw, 681px" srcset="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05-p-500.webp 500w, https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp 681w" alt="Music Distribution: Digital Service for Artists &amp; Labels" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2ac6cecdbeac89299_artist10.webp" loading="lazy" alt="Music distribution | Top Music Distribution Companies in India" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2c20ab457e1c1a694_artist04.webp" loading="lazy" alt="Best Free Music Distribution - Madverse.co" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp" loading="lazy" sizes="(max-width: 681px) 100vw, 681px" srcset="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05-p-500.webp 500w, https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp 681w" alt="Music Distribution: Digital Service for Artists &amp; Labels" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2ac6cecdbeac89299_artist10.webp" loading="lazy" alt="Music distribution | Top Music Distribution Companies in India" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2c20ab457e1c1a694_artist04.webp" loading="lazy" alt="Best Free Music Distribution - Madverse.co" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp" loading="lazy" sizes="(max-width: 681px) 100vw, 681px" srcset="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05-p-500.webp 500w, https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp 681w" alt="Music Distribution: Digital Service for Artists &amp; Labels" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2ac6cecdbeac89299_artist10.webp" loading="lazy" alt="Music distribution | Top Music Distribution Companies in India" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2c20ab457e1c1a694_artist04.webp" loading="lazy" alt="Best Free Music Distribution - Madverse.co" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp" loading="lazy" sizes="(max-width: 681px) 100vw, 681px" srcset="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05-p-500.webp 500w, https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f20314d43f574f64a0_artist05.webp 681w" alt="Music Distribution: Digital Service for Artists &amp; Labels" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2ac6cecdbeac89299_artist10.webp" loading="lazy" alt="Music distribution | Top Music Distribution Companies in India" class="testimonial">
+          <img src="https://cdn.prod.website-files.com/66a2518ff5fcac851841fbe7/66e720f2c20ab457e1c1a694_artist04.webp" loading="lazy" alt="Best Free Music Distribution - Madverse.co" class="testimonial">
+        </div>
+      </div>
+    </Section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 px-4 bg-black musci_connection_section relative">
+        <div class="bg-black bg-opacity-70 w-full h-full absolute top-0 left-0"></div>
+      <div class="max-w-7xl mx-auto rounded-3xl bg-zinc-900 flex flex-col md:flex-row items-center justify-between p-10 md:p-16 gap-10 md:gap-0 shadow-lg music_inner_section z-50 relative">
+        <!-- Left: Text and Buttons -->
+        <div class="flex flex-col items-start justify-center lg:w-[50%]">
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-6 leading-tight  wow fadeInUp">LET SPLENDORIUM POWER<br>YOUR NEXT RELEASE</h2>
+          <p class="text-gray-400 text-lg mb-10  wow fadeInUp">Take your music, movie, or creative project to the next level with a platform that gets results.</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="mailto:info@example.com" class="bg-purple-700 text-white font-semibold rounded-lg px-8 py-3 shadow  transition hover:bg-transparent border-2 border-purple-700  wow fadeInUp">Connect</a>
+            <a href="#services" class="border-2 border-zinc-500 text-white font-semibold rounded-lg px-8 py-3 hover:bg-zinc-800 transition  wow fadeInUp">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 py-10 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center gap-10">
+        <!-- Menu -->
+        <nav>
+          <ul class="flex flex-col md:flex-row gap-6 items-center justify-center text-gray-300 text-base font-medium  wow fadeInUp">
+            <li><a href="#home" class="hover:text-purple-700 transition">Home</a></li>
+            <li><a href="#about-us" class="hover:text-purple-700 transition">About Us</a></li>
+            <li><a href="#services" class="hover:text-purple-700 transition">Services</a></li>
+          </ul>
+        </nav>
+        <!-- Social Icons -->
+        <div class="flex gap-6 justify-center md:justify-end  wow fadeInUp">
+          <a href="#" aria-label="Facebook" class="hover:text-purple-700 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.632.771-1.632 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="hover:text-purple-700 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.59-2.47.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.77c-.37.64-.58 1.39-.58 2.19 0 1.51.77 2.84 1.95 3.62-.72-.02-1.39-.22-1.98-.55v.06c0 2.11 1.5 3.87 3.5 4.27-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.68 2.12 2.91 3.99 2.94A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.72 8.72 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="hover:text-purple-700 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 3zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm6 1.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>
+          </a>
+          <a href="#" aria-label="Spotify" class="hover:text-purple-700 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.29 14.71a.997.997 0 0 1-1.37.29c-3.73-2.29-8.47-2.8-11.14-1.65a1 1 0 1 1-.72-1.87c3.13-1.21 8.36-.65 12.51 1.85a1 1 0 0 1 .29 1.38zm1.42-3.13a1 1 0 0 1-1.37.29c-4.27-2.62-10.8-3.39-14.23-2a1 1 0 1 1-.72-1.87c3.89-1.5 10.03-.67 15.03 2.19a1 1 0 0 1 .29 1.39zm.01-3.13a1 1 0 0 1-1.37.29c-4.8-2.95-12.6-3.22-16.61-1.89a1 1 0 1 1-.72-1.87c4.44-1.53 12.87-1.22 18.13 2.09a1 1 0 0 1 .29 1.38z"/></svg>
+          </a>
+        </div>
+        <!-- Copyright -->
+        <div class="text-gray-400 text-center md:text-right text-sm mt-8 md:mt-0  wow fadeInUp">
+          © 2024 Splendorium Entertainment. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      const menuButton = document.getElementById('mobileMenuButton');
+        const mobileNav = document.getElementById('mobileNav');
+
+        menuButton.addEventListener('click', () => {
+            const isHidden = mobileNav.classList.contains('hidden');
+
+            if (isHidden) {
+            mobileNav.classList.remove('hidden');
+            // trigger reflow to allow transition
+            void mobileNav.offsetWidth;
+            mobileNav.classList.remove('opacity-0', '-translate-y-2');
+            mobileNav.classList.add('opacity-100', 'translate-y-0');
+            } else {
+            mobileNav.classList.add('opacity-0', '-translate-y-2');
+            mobileNav.classList.remove('opacity-100', 'translate-y-0');
+            // wait for transition to finish before hiding
+            setTimeout(() => {
+                mobileNav.classList.add('hidden');
+            }, 300); // matches duration-300
+            }
+        });
+
+      // FAQ accordion functionality
+      document.querySelectorAll('.faq-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector('svg');
+          if (content.classList.contains('hidden')) {
+            document.querySelectorAll('#faq-accordion > div > div:not(.hidden)').forEach(el => {
+              el.classList.add('hidden');
+              el.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+            });
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+          } else {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+          }
+        });
+      });
+
+      $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(e) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top - 50 // offset for fixed header
+        }, 800); // 800ms animation
+      }
+    });
+  });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+body {
+  font-family: "Archivo", sans-serif;
+}
+
+.musci_connection_section {
+  background-image: url("../images/musci-group-thumb.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.music_inner_section {
+  background-image: url("../images/musci-group-thumb.webp");
+  background-size: 50%;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.master-moving-logos {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-direction: column;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.move-moving-logos {
+  grid-column-gap: 64px;
+  grid-row-gap: 64px;
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.single-moving-logo {
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
+  opacity: 0.24;
+  flex: none;
+  align-items: center;
+  display: flex;
+  animation: scroll-left 35s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-logo {
+  max-width: 200px;
+  height: 38px;
+}
+
+.gradient-moving-logo-left {
+  background-image: linear-gradient(90deg, var(--color--dark), #08041100);
+  width: 180px;
+  position: absolute;
+  inset: 0% auto 0% 0%;
+}
+
+.gradient-moving-logo-right {
+  background-image: linear-gradient(90deg, #08041100, var(--color--dark));
+  width: 180px;
+  position: absolute;
+  inset: 0% 0% 0% auto;
+}
+.marqueeimage {
+  max-height: 56px;
+}
+.master-circles-wide {
+  z-index: 1;
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  justify-content: flex-start;
+  align-self: flex-start;
+  align-items: center;
+  width: 100vw;
+  margin-left: -80px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  position: relative;
+  inset: 0%;
+  overflow: hidden;
+}
+.inner-circles-wide {
+  grid-column-gap: 2vw;
+  flex-direction: row;
+  flex: none;
+  align-items: center;
+  width: auto;
+  display: flex;
+  animation: scroll-left 50s linear infinite;
+}
+.inner-circles-wide img {
+  max-height: 280px;
+}
+
+@media screen and (max-width: 767px) {
+  .music_inner_section {
+    background-image: none;
+  }
+}
